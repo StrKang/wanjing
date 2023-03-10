@@ -10,7 +10,7 @@ class Arr
      * @param array $highlight
      * @return array
      */
-    static function search_highlight(array $highlight): array
+    static function searchHighlight(array $highlight): array
     {
         $data = [];
         if (empty($highlight)) return $data;
@@ -40,6 +40,7 @@ class Arr
         }
         return $tree;
     }
+
     static function index_by(array $arr, string $index): array
     {
         $newArr = [];

@@ -22,12 +22,6 @@
     "ext-json": "*"
   },
   "require-dev": {
-    "mockery/mockery": "~1.5",
-    "phpstan/phpstan": "~1.0",
-    "phpunit/phpunit": ">=8.0",
-    "swoole/ide-helper": "dev-master",
-    "swow/swow": "dev-develop",
-    "symfony/var-dumper": "^5.1"
   },
   "config": {
     "sort-packages": true

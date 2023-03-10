@@ -9,7 +9,7 @@
   "description": "工具包",
   "autoload": {
     "psr-4": {
-      "wanjing\\Utility\\": "src/"
+      "wanjing\\Utility\\": "src"
     }
   },
   "require": {

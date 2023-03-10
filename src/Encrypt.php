@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by : PhpStorm
- * User: tyd
- * Date: 2021/11/26
- * Time: 5:47 下午
- */
 
-namespace Henanwanjing\Utility;
+namespace Wanjing\Utility;
 
 
 class Encrypt

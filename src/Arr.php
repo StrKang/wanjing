@@ -2,12 +2,15 @@
 
 namespace Wanjing\Utility;
 
-
+/**
+ * 处理数组相关
+ */
 class Arr
 {
 
     /**
-     * @param array $highlight
+     * es高亮字段处理
+     * @param array $highlight 结果数组
      * @return array
      */
     static function searchHighlight(array $highlight): array
@@ -22,14 +25,14 @@ class Arr
     /**
      * 获取数组的树形结构
      * @param array $list
-     * @param string $pk
-     * @param string $pid
-     * @param string $child
+     * @param string $pk 主键
+     * @param string $pid 父id
+     * @param string $child 下级分组字段名
      * @return array
      */
     static function tree(array $list, string $pk = 'id', string $pid = 'parentId', string $child = 'children'): array
     {
-        $items = self::index_by($list, $pk);
+        $items = self::indexBy($list, $pk);
         $tree = [];
         foreach ($items as $key => $item) {
             if (isset($items[$item[$pid] ?? 0])) {
@@ -41,7 +44,12 @@ class Arr
         return $tree;
     }
 
-    static function index_by(array $arr, string $index): array
+    /**
+     * @param array $arr
+     * @param string $index
+     * @return array
+     */
+    static function indexBy(array $arr, string $index): array
     {
         $newArr = [];
         foreach ($arr as $item) {

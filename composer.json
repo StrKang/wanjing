@@ -14,7 +14,10 @@
   },
   "require": {
     "php": ">=8.0",
-    "ext-json": "*"
+    "ext-json": "*",
+    "ext-bcmath": "*",
+    "ext-mbstring": "*",
+    "ext-calendar": "*"
   },
   "config": {
     "sort-packages": true

@@ -99,4 +99,20 @@ class Str
     {
         return password_hash($value, PASSWORD_BCRYPT, [ 'cost' => $cost ]);
     }
+
+    /**
+     * 驼峰转下划线
+     * @param string $value     待处理字符串
+     * @param string $delimiter 分隔符
+     * @author : evalor <master@evalor.cn>
+     * @return string
+     */
+    static function snake(string $value, string $delimiter = '_'): string
+    {
+        if (!ctype_lower($value)) {
+            $value = preg_replace('/\s+/u', '', $value);
+            $value = mb_strtolower(preg_replace('/(.)(?=[A-Z])/u', '$1' . $delimiter, $value));
+        }
+        return $value;
+    }
 }

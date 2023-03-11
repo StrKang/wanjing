@@ -17,7 +17,8 @@
     "ext-json": "*",
     "ext-bcmath": "*",
     "ext-mbstring": "*",
-    "ext-calendar": "*"
+    "ext-calendar": "*",
+    "ext-ctype": "*"
   },
   "config": {
     "sort-packages": true
